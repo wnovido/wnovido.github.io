@@ -1,14 +1,17 @@
-var app = angular.module('BMICalculator',[]);
-app.controller('BMIController',function($scope) {
-        $scope.bmi = 0;
-        $scope.heightFt = 0;
-        $scope.heightInch = 0;
-        $scope.weightLb = 0;
+'use strict';
 
-        $scope.calcBMI = function() {
-        	if ($scope.heightFt === null || $scope.heightInch === null || $scope.weightLb === null)
-        		$scope.bmi = 0;
-        	else
-            	$scope.bmi = $scope.weightLb/Math.pow($scope.heightFt * 12 + $scope.heightInch,2)*703;
-        };
-});
+// Declare app level module which depends on views, and components
+angular.module('myApp', [
+  'ngRoute',
+  'myApp.view1',
+  'myApp.view2',
+  'myApp.version',
+  'myApp.services'
+]).
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.
+      when("/view1", {templateUrl: "view1/view1.html", controller: "driversController"}).
+      when("/view1/:id", {templateUrl: "view1/driver.html", controller: "driverController"}).
+      otherwise({redirectTo: '/view1'});
+}]);
+
