@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BMICalculator">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+</head>
+    <body ng-controller="BMIController">
+        <p>Enter Height in feet: <input type="number" ng-model="heightFt" min=0 ng-change="calcBMI()"></input>
+           Enter Height in inches: <input type="number" ng-model="heightInch" min=0 ng-change="calcBMI()"></input></p>
+        <p>Enter Weight in pounds: <input type="number" ng-model="weightLb" min=0 ng-change="calcBMI()"></input></p>
+        <p><b>BMI: {{bmi}} </b></p>
+
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+
+        <div ng
+    </body>
+</html>
