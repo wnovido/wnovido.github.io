@@ -1,5 +1,8 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<body ng-controller="View2Ctrl">
+<p>Enter Height in feet: <input type="number" ng-model="heightFt" min=0 ng-change="calcBMI()"></input>
+  Enter Height in inches: <input type="number" ng-model="heightInch" min=0 ng-change="calcBMI()"></input></p>
+<p>Enter Weight in pounds: <input type="number" ng-model="weightLb" min=0 ng-change="calcBMI()"></input></p>
+<p><b>BMI: {{bmi}} </b></p>
+
+<script src="view2.js"></script>
+</body>
