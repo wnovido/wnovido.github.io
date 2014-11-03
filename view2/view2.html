@@ -1,8 +1,31 @@
 <body ng-controller="View2Ctrl">
-<p>Enter Height in feet: <input type="number" ng-model="heightFt" min=0 ng-change="calcBMI()"></input>
-  Enter Height in inches: <input type="number" ng-model="heightInch" min=0 ng-change="calcBMI()"></input></p>
-<p>Enter Weight in pounds: <input type="number" ng-model="weightLb" min=0 ng-change="calcBMI()"></input></p>
-<p><b>BMI: {{bmi}} </b></p>
+
+
+  <form class="form-inline" role="form">
+    <div class="form-group">
+
+      <span class="help-block">Height in Ft</span>
+      <input type="number" class="form-control" id="heightFt" ng-model="heightFt" min=0 ng-change="calcBMI()"></input>
+    </div>
+
+    <div class="form-group">
+      <span class="help-block">Height in Inch</span>
+      <input type="number" class="form-control" id="heightIn" ng-model="heightInch" min=0 ng-change="calcBMI()"></input>
+    </div>
+  </form>
+  <br>
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <span class="help-block">Enter Weight in Lbs</span>
+      <input type="number" class="form-control" id="weightLb" ng-model="weightLb" min=0 ng-change="calcBMI()"></input>
+    </div>
+  </form>
+
+  <br>
+  <div class="alert alert-info">
+    <strong>BMI: {{bmi}}</strong>
+  </div>
+
 
 <script src="view2.js"></script>
 </body>
