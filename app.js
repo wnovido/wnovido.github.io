@@ -13,5 +13,26 @@ config(['$routeProvider', function($routeProvider) {
       when("/view1", {templateUrl: "view1/view1.html", controller: "driversController"}).
       when("/view1/:id", {templateUrl: "view1/driver.html", controller: "driverController"}).
       otherwise({redirectTo: '/view1'});
-}]);
+}])
 
+
+
+    .controller('myAppCtrl', function($scope) {
+
+        $scope.getClass = function(path) {
+            alert($scope.view1xxx);
+            alert($location.path());
+            alert(path());
+            if ($location.path().substr(0, path.length) == path)
+                return "active";
+            else
+                return "";
+        };
+
+        $scope.act1 = "active";
+        $scope.myFunction= function(path) {
+            $scope.act1 = (path === "#/view1" ? "active" : "");
+            $scope.act2 = (path === "#/view2" ? "active" : "");
+        };
+
+    });

@@ -1376,7 +1376,7 @@ function angularInit(element, bootstrap) {
  * @description
  * Use this function to manually start up angular application.
  *
- * See: {@link guide/bootstrap Bootstrap}
+ * See: {@link guide/bootstrap bootstrap}
  *
  * Note that ngScenario-based end-to-end tests cannot use this function to bootstrap manually.
  * They must use {@link ng.directive:ngApp ngApp}.
