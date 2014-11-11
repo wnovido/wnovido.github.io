@@ -3,13 +3,13 @@
 angular.module('myApp.view2', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view2', {
-    templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
+  $routeProvider.when('/view_bmi', {
+      templateUrl: 'view_bmi/view_bmi.html',
+      controller: 'BMICtrl'
   });
 }])
 
-.controller('View2Ctrl', function($scope) {
+.controller('BMICtrl', function($scope) {
       $scope.bmi = 0;
       $scope.heightFt = 0;
       $scope.heightInch = 0;

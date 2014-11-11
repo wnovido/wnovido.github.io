@@ -1,14 +1,14 @@
 'use strict';
 
-describe('myApp.view2 module', function() {
+describe('myApp.view_bmi module', function() {
 
   beforeEach(module('myApp.view2'));
 
-  describe('view2 controller', function(){
+  describe('view_bmi controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body
-      var view2Ctrl = $controller('View2Ctrl');
+      var view2Ctrl = $controller('BMICtrl');
       expect(view2Ctrl).toBeDefined();
     }));
 
