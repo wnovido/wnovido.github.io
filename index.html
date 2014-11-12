@@ -12,14 +12,39 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<style>
+  body {
+    background-image: url("img/Ice_White_Gradient_by_Halaxega.png");
+    background-repeat: repeat-x;
+  }
+</style>
 </head>
+
 <body ng-controller="myAppCtrl">
   <div class="container">
+
     <ul class="nav nav-pills">
       <li class="{{act1}}" ng-click="myFunction('#/view1')"><a href="#/view1">Formula 1 Feeder</a></li>
-      <li class="{{act2}}" ng-click="myFunction('#/view_bmi')"><a href="#/view_bmi">BMI Calculation</a></li>
+
+      <li class="dropdown {{act2}}" ng-click="myFunction('#/view_bmi')">
+        <a href="" data-toggle="dropdown" class="dropdown-toggle">BMI Calculator<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#/view_bmi">Metric</a></li>
+          <li><a href="#/view_bmi2">English</a></li>
+        </ul>
+      </li>
+
+
       <li class="{{act3}}" ng-click="myFunction('#/view_phone_cat')"><a href="#/view_phone_cat">Phone Cat</a></li>
     </ul>
   </div>

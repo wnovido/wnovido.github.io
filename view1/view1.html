@@ -1,10 +1,18 @@
+
 <body ng-controller="driversController">
-<input type="text" ng-model="nameFilter" class="form-control input-lg" placeholder="Search..."/>
-<!--div class="container"-->
+<div class="container row">
+    <div class="col-xs-3">
+        <input type="text" ng-model="nameFilter" class="form-control" placeholder="Search..."/>
+    </div>
+</div>
+
+<div class="container row">
+    <div class="col-xs-5">
     <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title">Drivers Championship Standings</h3>
         </div>
+
         <table class="table table-hover table-condensed table-bordered">
 
             <tr ng-repeat="driver in driversList | filter:searchFilter">
@@ -20,5 +28,6 @@
             </tbody>
         </table>
     </div>
-<!--/div-->
+    </div>
+</div>
 </body>

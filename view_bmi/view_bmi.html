@@ -1,29 +1,38 @@
 <body ng-controller="BMICtrl">
-
-
-  <form class="form-inline" role="form">
-    <div class="form-group">
-
-      <span class="help-block">Height in Ft</span>
-      <input type="number" class="form-control" id="heightFt" ng-model="heightFt" min=0 ng-change="calcBMI()"></input>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        BMI Metric Calculation
+      </h4>
     </div>
 
-    <div class="form-group">
-      <span class="help-block">Height in Inch</span>
-      <input type="number" class="form-control" id="heightIn" ng-model="heightInch" min=0 ng-change="calcBMI()"></input>
-    </div>
-  </form>
-  <br>
-  <form class="form-inline" role="form">
-    <div class="form-group">
-      <span class="help-block">Enter Weight in Lbs</span>
-      <input type="number" class="form-control" id="weightLb" ng-model="weightLb" min=0 ng-change="calcBMI()"></input>
-    </div>
-  </form>
+    <div class="panel-body">
 
-  <br>
-  <div class="alert alert-info">
-    <strong>BMI: {{bmi}}</strong>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+
+          <span class="help-block">Height in ft</span>
+          <input type="number" class="form-control" id="heightFt" ng-model="heightFt" min=0 ng-change="calcBMI()"></input>
+        </div>
+
+        <div class="form-group">
+          <span class="help-block">Height in inch</span>
+          <input type="number" class="form-control" id="heightIn" ng-model="heightInch" min=0 ng-change="calcBMI()"></input>
+        </div>
+      </form>
+      <br>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <span class="help-block">Enter Weight in lbs</span>
+          <input type="number" class="form-control" id="weightLb" ng-model="weightLb" min=0 ng-change="calcBMI()"></input>
+        </div>
+      </form>
+
+      <br>
+      <div class="alert alert-info col-md-4">
+        <strong>BMI: {{bmi}}</strong>
+      </div>
+
+    </div>
   </div>
-
 </body>
