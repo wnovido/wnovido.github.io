@@ -8,8 +8,9 @@ angular.module('myApp', [
   'myApp.view3',
   'myApp.version',
   'myApp.services'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when("/view1", {templateUrl: "view1/view1.html", controller: "driversController"}).
       when("/view1/:id", {templateUrl: "view1/driver.html", controller: "driverController"}).

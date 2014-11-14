@@ -29,6 +29,10 @@
     padding: 0;
 }
 
-.mypanel {
-    overflow: auto;
+.widthdriver {
+    width: 1100px;
+}
+
+.widthdrivers {
+    width: 800px;
 }
