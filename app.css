@@ -28,11 +28,3 @@
     content: "";
     padding: 0;
 }
-
-.widthdriver {
-    overflow: auto;
-}
-
-.widthdrivers {
-    width: 200px;
-}
