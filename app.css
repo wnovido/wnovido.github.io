@@ -28,3 +28,13 @@
     content: "";
     padding: 0;
 }
+
+.mypanel {
+    overflow-y: auto;
+    width: 150px;
+}
+
+.mypanel2 {
+    overflow-y: auto;
+    width: 500px;
+}

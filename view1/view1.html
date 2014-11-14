@@ -1,35 +1,37 @@
 <body ng-controller="driversController">
-
-    <div class="container row">
-        <div class="col-xs-5">
-            <input type="text" ng-model="nameFilter" class="form-control" placeholder="Search..."/>
-        </div>
-    </div>
-
-    <div class="container row">
-        <div class="col-xs-20">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Drivers Championship Standings</h3>
+    <div class="container">
+        <div class="container row">
+            <div class="col-xs-8">
+                <div class="panel panel-info">
+                    <input type="text" ng-model="nameFilter" class="form-control" placeholder="Search..."/>
                 </div>
+            </div>
+        </div>
 
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <tr ng-repeat="driver in driversList | filter:searchFilter">
-                            <td>{{$index + 1}}</td>
-                            <td>
-                                <img src="img/flags/{{driver.Driver.nationality}}.png" />
-                                <a href="#/view1/{{driver.Driver.driverId}}">
-                                {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
-                            </td>
-                            <td>{{driver.Constructors[0].name}}</td>
-                            <td>{{driver.points}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+        <div class="container row">
+            <div class="col-xs-20">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Drivers Championship Standings</h3>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <tr ng-repeat="driver in driversList | filter:searchFilter">
+                                <td>{{$index + 1}}</td>
+                                <td>
+                                    <img src="img/flags/{{driver.Driver.nationality}}.png" />
+                                    <a href="#/view1/{{driver.Driver.driverId}}">
+                                    {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+                                </td>
+                                <td>{{driver.Constructors[0].name}}</td>
+                                <td>{{driver.points}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
