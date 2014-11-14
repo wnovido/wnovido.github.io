@@ -1,5 +1,6 @@
 <section id="main">
     <div class="widthdriver">
+
         <div class="col-xs-2">
             <div class="panel panel-info">
                 <div class="alert alert-success" role="alert">
@@ -23,31 +24,32 @@
             </div>
         </div>
 
-        <div class="main-content">
-            <div class="col-xs-5">
+        <div class="col-xs-2">
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title">Formula 1 2013 Results</h3>
                     </div>
 
-                    <table class="table table-hover table-bordered">
-                        <tbody>
-                            <tr>
-                                <td>Round</td> <td>Grand Prix</td> <td>Team</td> <td>Grid</td> <td>Race</td>
-                            </tr>
+                    <!--div class="table-responsive"-->
+                        <table class="table table-hover table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>Round</td> <td>Grand Prix</td> <td>Team</td> <td>Grid</td> <td>Race</td>
+                                </tr>
 
-                            <tr ng-repeat="race in races">
-                                <td>{{race.round}}</td>
-                                <td><img  src="img/flags/{{race.Circuit.Location.country}}.png" />{{race.raceName}}</td>
-                                <td>{{race.Results[0].Constructor.name}}</td>
-                                <td>{{race.Results[0].grid}}</td>
-                                <td>{{race.Results[0].position}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                <tr ng-repeat="race in races">
+                                    <td>{{race.round}}</td>
+                                    <td><img  src="img/flags/{{race.Circuit.Location.country}}.png" />{{race.raceName}}</td>
+                                    <td>{{race.Results[0].Constructor.name}}</td>
+                                    <td>{{race.Results[0].grid}}</td>
+                                    <td>{{race.Results[0].position}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                <!--/div-->
 
-                </div>
-            </div>
         </div>
+
     </div>
 </section>
