@@ -1,7 +1,7 @@
-# packaged angular-loader
+# packaged angular-resource
 
 This repo is for distribution on `npm` and `bower`. The source for this module is in the
-[main AngularJS repo](https://github.com/angular/angular.js/blob/master/src/loader.js).
+[main AngularJS repo](https://github.com/angular/angular.js/tree/master/src/ngResource).
 Please file issues and pull requests against that repo.
 
 ## Install
@@ -11,34 +11,46 @@ You can install this package either with `npm` or with `bower`.
 ### npm
 
 ```shell
-npm install angular-loader
+npm install angular-resource
 ```
 
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/node_modules/angular-loader/angular-loader.js"></script>
+<script src="/node_modules/angular-resource/angular-resource.js"></script>
 ```
 
-Note that this package is not in CommonJS format, so doing `require('angular-loader')` will
+Then add `ngResource` as a dependency for your app:
+
+```javascript
+angular.module('myApp', ['ngResource']);
+```
+
+Note that this package is not in CommonJS format, so doing `require('angular-resource')` will
 return `undefined`.
 
 ### bower
 
 ```shell
-bower install angular-loader
+bower install angular-resource
 ```
 
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/angular-loader/angular-loader.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.js"></script>
+```
+
+Then add `ngResource` as a dependency for your app:
+
+```javascript
+angular.module('myApp', ['ngResource']);
 ```
 
 ## Documentation
 
 Documentation is available on the
-[AngularJS docs site](http://docs.angularjs.org/guide/bootstrap).
+[AngularJS docs site](http://docs.angularjs.org/api/ngResource).
 
 ## License
 

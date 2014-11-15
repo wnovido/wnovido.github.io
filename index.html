@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="animations.css">
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -45,7 +46,7 @@
       </li>
 
 
-      <li class="{{act3}}" ng-click="myFunction('#/view_phone_cat')"><a href="#/view_phone_cat">Phone Cat</a></li>
+      <li class="{{act3}}" ng-click="myFunction('#/view_phone_cat')"><a href="#/view_phone_cat">Phone Category</a></li>
     </ul>
 
   </div>
@@ -60,13 +61,19 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="app.js"></script>
   <script src="services.js"></script>
+  <script src="animations.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view_bmi/view_bmi.js"></script>
   <script src="view_phone_cat/view_phone_cat.js"></script>
+  <script src="view_phone_cat/filters.js"></script>
+  <script src="view_phone_cat/services.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
