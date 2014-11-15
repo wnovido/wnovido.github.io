@@ -30,8 +30,8 @@
 }
 
 .mypanel {
-    overflow-y: auto;
-    width: 150px;
+    overflow: auto;
+    height: 115px;
 }
 
 .mypanel2 {

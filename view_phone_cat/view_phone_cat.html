@@ -17,12 +17,11 @@
             <ul class="phones">
                 <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail phone-listing">
                     <div class="container-fluid">
-                        <div class="col-sm-1 col-md-1">
+                        <div class="col-sm-10 mypanel">
                             <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+                            <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                            <p>{{phone.snippet+'xxx'}}</p>
                         </div>
-
-                        <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-                        <p>{{phone.snippet}}</p>
                     </div>
                 </li>
             </ul>
