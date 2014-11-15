@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view3', ['ngRoute','phonecatFilters','phonecatServices']).
+angular.module('myApp.view3', ['ngRoute','phonecatFilters','phonecatServices','phonecatAnimations']).
 
     controller('PhoneCatCtrl', function($scope, Phone) {
         $scope.phones = Phone.query();

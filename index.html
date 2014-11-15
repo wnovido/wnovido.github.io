@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="app.css">
-  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="view_phone_cat/animations.css">
+  <link rel="stylesheet" href="view_phone_cat/view_phone_cat-detail.css">
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -54,7 +55,11 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <div ng-view></div>
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+
+  <!--div ng-view></div-->
 
   <!--div>Angular seed app: v<span app-version></span></div-->
 
@@ -68,7 +73,7 @@
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="app.js"></script>
   <script src="services.js"></script>
-  <script src="animations.js"></script>
+  <script src="view_phone_cat/animations.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view_bmi/view_bmi.js"></script>
   <script src="view_phone_cat/view_phone_cat.js"></script>
