@@ -1,31 +1,23 @@
-<div class="container-fluid">
-    <div class="row">
+<div class="container">
+    <div class="col-md-2">
+        <!--Sidebar content-->
 
-        <div class="col-md-2">
-            <!--Sidebar content-->
-            <div class="container-fluid">
-            Search: <input ng-model="query"><br>
-            Sort by: <select ng-model="orderProp">
-                        <option value="name">Alphabetical</option>
-                        <option value="age">Newest</option>
-                     </select>
-            </div>
-        </div>
+        Search: <input ng-model="query"><br>
+        Sort by: <select ng-model="orderProp">
+                    <option value="name">Alphabetical</option>
+                    <option value="age">Newest</option>
+                 </select>
+    </div>
 
-        <div class="col-md-10">
-            <!--Body content-->
-            <ul class="phones">
-                <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail phone-listing">
-                    <div class="container-fluid">
-                        <div class="col-sm-10 mypanel">
-                            <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-                            <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-                            <p>{{phone.snippet+'xxx'}}</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+    <div class="col-md-10 mypanel">
+        <!--Body content-->
+        <ul class="phones">
+            <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail phone-listing">
+                <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
 
+                <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                <p>{{phone.snippet}}</p>
+            </li>
+        </ul>
     </div>
 </div>

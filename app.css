@@ -31,10 +31,5 @@
 
 .mypanel {
     overflow: auto;
-    height: 115px;
-}
-
-.mypanel2 {
-    overflow-y: auto;
     width: 500px;
 }
