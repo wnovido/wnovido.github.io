@@ -13,7 +13,6 @@ angular.module('myApp.view4', ['ngRoute', 'ngResource', 'movieStubServices']).
 			window.history.back()
 		};
 
-
 		$scope.isActive = function(route) {
 			return route === $location.path();
 		};
@@ -59,12 +58,10 @@ angular.module('myApp.view4', ['ngRoute', 'ngResource', 'movieStubServices']).
 	})
 
 	.controller("bookingDetailsController", function($scope, sharedFunc) {
-		$scope.bookings = sharedFunc.getBookings();//movieStubBookingsFactory.query();
-
+		$scope.bookings = sharedFunc.getBookings();
 		$scope.back = function () {
 			window.history.back()
 		};
-
 	})
 
 ;

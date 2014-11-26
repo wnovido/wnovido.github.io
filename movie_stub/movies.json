@@ -1,6 +1,24 @@
 [
   {
     "id": 0,
+    "name": "My House Husband Ikaw Na!",
+    "rating": 4,
+    "availability": 0,
+    "review": "When Rod (Ryan Agoncillo), a father of two decided to quit his job, his wife (Judy Ann Santos) eventually decides to pursue a life of a career woman. As if this arrangement was not difficult enough (for an ordinary middle class Filipino family) for the two loving couple, a new neighbor (Eugene Domingo) comes along which may possibly put the couple’s marriage to the test. That plus the malicious rumors spread by neighbors and the meddlesome relatives of each party. Thus the comedy ends and the family drama begins.",
+    "thumb": "http://upload.wikimedia.org/wikipedia/en/5/5e/My_House_Husband%2C_Ikaw_na.jpg"
+  },
+
+  {
+    "id": 1,
+    "name": "She's Dating the Gangster",
+    "rating": 5,
+    "availability": 9,
+    "review": "Two high-school students (Kathryn Bernardo, Daniel Padilla) pretend to date to make one's ex-girlfriend jealous, then they do fall in love.",
+    "thumb": "http://starmusic.abs-cbn.com/static/uploads/starmusic.abs-cbn.com/212cff9b494171301e31e99cd1d4df7f.jpg"
+  },
+
+  {
+    "id": 2,
     "name": "Iron Man",
     "rating": 5,
     "availability": 9,
@@ -8,7 +26,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg"
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "Jurassic Park",
     "rating": 5,
     "availability": 3,
@@ -16,7 +34,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg"
   },
   {
-    "id": 2,
+    "id": 4,
     "name": "Transformers",
     "rating": 5,
     "availability": 5,
@@ -24,7 +42,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/6/66/Transformers07.jpg"
   },
   {
-    "id": 3,
+    "id": 5,
     "name": "Avatar",
     "rating": 4,
     "availability": 3,
@@ -32,7 +50,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg"
   },
   {
-    "id": 4,
+    "id": 6,
     "name": "The Incredible Hulk",
     "rating": 5,
     "availability": 18,
@@ -40,7 +58,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/8/88/The_Incredible_Hulk_poster.jpg"
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "X-Men",
     "rating": 4,
     "availability": 0,
@@ -48,7 +66,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/8/8c/XMen1poster.jpg"
   },
   {
-    "id": 6,
+    "id": 8,
     "name": "RoboCop",
     "rating": 3,
     "availability": 6,
@@ -56,7 +74,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/b/b1/Robocop_poster.jpg"
   },
   {
-    "id": 7,
+    "id": 9,
     "name": "Godzilla (I)",
     "rating": 3,
     "availability": 2,
@@ -64,7 +82,7 @@
     "thumb": "http://upload.wikimedia.org/wikipedia/en/2/2e/Godzilla_%281998_Movie_Poster%29.jpg"
   },
   {
-    "id": 8,
+    "id": 10,
     "name": "Hollow Man",
     "rating": 3,
     "availability": 6,
