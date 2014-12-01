@@ -1,0 +1,56 @@
+<div class="container container-fluid">
+ <body>
+    <a data-ng-click="back()" class="btn btn-info pull-right" href="javascript:back()">Back</a>
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">Please Add Movie</h3>
+        </div>
+        <div class="panel-body form-horizontal autoflow">
+            <form role="form" name="addMovie" class="form-horizontal" data-ng-submit="processMovie()" id = "nav">
+
+                <div class="form-group">
+                    <label for="name" class="col-xs-1 control-label">Name</label>
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" data-ng-model="movieData.name" name="name" id="name" placeholder="Movie Name" data-ng-model="name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rating" class="col-xs-1 control-label">Rating</label>
+                    <div class="col-xs-1">
+                        <input type="text" class="form-control" data-ng-model="movieData.rating" name="rating" id="rating" data-ng-pattern="onlyNumbers" placeholder="Rating" data-ng-model="rating" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability" class="col-xs-1 control-label">Availability</label>
+                    <div class="col-xs-1">
+                        <input type="text" class="form-control" data-ng-model="movieData.availability" name="availability" id="availability" data-ng-pattern="onlyNumbers" placeholder="Availability" data-ng-model="availability" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="review" class="col-xs-1 control-label">Review</label>
+                    <div class="col-xs-6">
+                        <textarea class="form-control" rows = 3 data-ng-model="movieData.review" name="review" id="review" placeholder="Review" data-ng-model="review" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="thumb" class="col-xs-1 control-label">Preview Link</label>
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" data-ng-model="movieData.thumb" name="thumb" id="thumb" placeholder="Preview Link" data-ng-model="thumb" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-default">Save</button>
+
+            </form>
+
+            <div id="section">
+                <img data-ng-src="{{movieData.thumb}}" class="bookThumb pull-left">
+            </div>
+
+        </div>
+    </div>
+ </body>
+</div>

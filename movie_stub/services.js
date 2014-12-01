@@ -12,13 +12,20 @@ angular.module('movieStubServices',['ngResource']).
 	service('sharedFunc', function(movieStubFactory) {
 		var bookings = [];
 		var movies = movieStubFactory.query();
+		var movieid = 10;
 
 		return {
+			getMovieID: function() {
+				return movieid;
+			},
+			incrementMovieID: function() {
+				movieid += 1;
+			},
 			getBookings: function () {
 				return bookings;
 			},
-			setBookings: function (value) {
-				bookings = value;
+			addMovie: function (value) {
+				movies.push(value);
 			},
 			addBooking: function (value) {
 				bookings.push(value);
@@ -34,6 +41,8 @@ angular.module('movieStubServices',['ngResource']).
 					}
 				}
 			}
+
+
 		}
 	})
 ;

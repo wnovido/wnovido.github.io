@@ -1,21 +1,23 @@
 <div class="container container-fluid">
-<h2>Book a Movie Ticket</h2>
-<input text="text" placeholder="Search Movies" class="form-control" data-ng-model="search">
+	<h2>Book a Movie Ticket
+		<a ng-href="#/addMovie" class="btn btn-danger pull-right">Add Movie</a>
+	</h2>
 
-<div class="">
-	<div class="row movies-list">
-		<div class="col-md-4" data-ng-repeat="movie in movies | orderBy:'name':true | filter:search">
-			<h2>{{movie.name | uppercase}}</h2>
-			<p>
-				<img data-ng-src="{{movie.thumb}}" class="thumb-big">
-			</p>
-			<p>{{movie.review | limitTo:99}}...</p>
-			<p>
-				<span class="label label-warning availability">Availability ({{movie.availability}})</span>
-				<a ng-href="#/movie_stub/{{movie.id}}" class="btn btn-primary">Review</a>
-				<a data-ng-href="#/bookTickets/{{movie.id}}" class="btn btn-success" role="button" data-ng-disabled="movie.availability == 0">Book »</a>
-			</p>
+	<div class="">
+		<div class="row movies-list">
+			<div class="col-md-4" data-ng-repeat="movie in movies | orderBy:'name' | filter:search">
+				<h3 class="titleSize">{{movie.name | uppercase}}</h3>
+				<p>
+					<img data-ng-src="{{movie.thumb}}" class="thumb-big">
+				</p>
+				<p>{{movie.review | limitTo:99}}...</p>
+				<p>
+					<span class="label label-warning availability">Availability ({{movie.availability}})</span>
+					<a ng-href="#/movie_stub/{{movie.id}}" class="btn btn-primary">Review</a>
+					<a data-ng-href="#/bookTickets/{{movie.id}}" class="btn btn-success" role="button" data-ng-disabled="movie.availability == 0">Book »</a>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
-</div>
+

@@ -33,3 +33,6 @@
     overflow: auto;
     width: 500px;
 }
+.autoflow {
+    overflow: auto;
+}

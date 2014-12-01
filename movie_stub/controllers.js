@@ -19,9 +19,10 @@ angular.module('myApp.view4', ['ngRoute', 'ngResource', 'movieStubServices']).
 		$scope.isActivePath = function(route) {
 			return ($location.path()).indexOf(route) >= 0;
 		};
-	})
+	}).
 
-	.controller("movieDetailsController", function ($scope, $routeParams, sharedFunc) {
+
+	controller("movieDetailsController", function ($scope, $routeParams, sharedFunc) {
 		$scope.currMovie = sharedFunc.getMovieById($routeParams.id);
 
 		$scope.getCount = function(n) {
@@ -32,10 +33,10 @@ angular.module('myApp.view4', ['ngRoute', 'ngResource', 'movieStubServices']).
 			window.history.back()
 		};
 
-	})
+	}).
 
 
-	.controller("bookTicketsController", function($scope, $http, $location, $routeParams, sharedFunc) {
+	controller("bookTicketsController", function($scope, $http, $location, $routeParams, sharedFunc) {
 		$scope.currMovie = sharedFunc.getMovieById($routeParams.id);
 		$scope.onlyNumbers = /^\d+$/;
 
@@ -45,20 +46,43 @@ angular.module('myApp.view4', ['ngRoute', 'ngResource', 'movieStubServices']).
 		$scope.formData.date = "Today";
 
 		$scope.processForm = function() {
-
 			$scope.bookings = sharedFunc.addBooking($scope.formData);
 			$location.path("/bookings");
-
 		}; //end processForm
 
 		$scope.back = function () {
 			window.history.back()
 		};
 
-	})
+	}).
 
-	.controller("bookingDetailsController", function($scope, sharedFunc) {
+
+	controller("bookingDetailsController", function($scope, sharedFunc) {
 		$scope.bookings = sharedFunc.getBookings();
+		$scope.back = function () {
+			window.history.back()
+		};
+	}).
+
+
+	controller("addMovieController", function($scope, sharedFunc) {
+
+		$scope.movieData = {};
+		$scope.movieData.id = 0;
+		$scope.movieData.name = "";
+		$scope.movieData.rating = 0;
+		$scope.movieData.availability = 0;
+		$scope.movieData.review = "";
+		$scope.movieData.thumb = "";
+
+
+		$scope.processMovie = function() {
+			sharedFunc.incrementMovieID();
+			$scope.movieData.id = sharedFunc.getMovieID();
+			$scope.movies = sharedFunc.addMovie($scope.movieData);
+			window.history.back();
+		}; //end processForm
+
 		$scope.back = function () {
 			window.history.back()
 		};
