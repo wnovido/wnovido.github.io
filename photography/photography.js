@@ -8,12 +8,10 @@ angular.module('myApp.photography', ['ngRoute'])
 }])
 
     .controller('PhotographyCtrl', function ($scope) {
-      $scope.myInterval = 500;
+      $scope.myInterval = 2000;
       var slides = $scope.slides = [];
-
       $scope.addSlide = function() {
         var newWidth = slides.length + 1;
-
         slides.push({
           image: 'img/slides/' + newWidth + '.jpg',
           text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
