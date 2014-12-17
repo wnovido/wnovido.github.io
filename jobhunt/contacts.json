@@ -1,0 +1,23 @@
+[
+  {
+    "id"            : 1,
+    "contactName"   : "Wilson Novido",
+    "contactEmail"  : "wilson_novido@yahoo.com",
+    "contactPhone"  : "919-462-0527"
+  },
+
+  {
+    "id"            : 2,
+    "contactName"   : "Michael Jordan",
+    "contactEmail"  : "mj23@bulls.com",
+    "contactPhone"  : "555-555-5555"
+  },
+
+  {
+    "id"            : 3,
+    "contactName"   : "Rich Newns",
+    "contactEmail"  : "rn@ajilon.com",
+    "contactPhone"  : "555-222-1234"
+  }
+
+]
