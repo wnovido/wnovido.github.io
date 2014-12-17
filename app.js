@@ -26,7 +26,7 @@ angular.module('myApp', [
     when("/bookTickets/:id", {templateUrl: "movie_stub/bookTickets.html", controller: "bookTicketsController"}).
     when('/bookings',{templateUrl: 'movie_stub/bookings.html',controller: 'bookingDetailsController'}).
     when("/addMovie",{templateUrl: "movie_stub/addMovie.html", controller: "addMovieController"}).
-    otherwise({redirectTo: "/photography"});
+    otherwise({redirectTo: "/jobhunt"});
 
 }])
 
