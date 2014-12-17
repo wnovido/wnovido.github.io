@@ -8,7 +8,9 @@ angular.module('myApp', [
   'myApp.view3',
   'myApp.view4',
   'myApp.version',
-  'myApp.services'
+  'myApp.services',
+  'myApp.photography',
+  'ui.bootstrap'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -24,14 +26,15 @@ angular.module('myApp', [
     when("/bookTickets/:id", {templateUrl: "movie_stub/bookTickets.html", controller: "bookTicketsController"}).
     when('/bookings',{templateUrl: 'movie_stub/bookings.html',controller: 'bookingDetailsController'}).
     when("/addMovie",{templateUrl: "movie_stub/addMovie.html", controller: "addMovieController"}).
-    otherwise({redirectTo: "/view1"});
+    otherwise({redirectTo: "/photography"});
 
 }])
 
 .controller('myAppCtrl', function($scope) {
 
-    $scope.act1 = "active";
+    $scope.photography = "active";
     $scope.myFunction= function(path) {
+        $scope.photography = (path === "#/photography" ? "active" : "");
         $scope.act1 = (path === "#/view1" ? "active" : "");
         $scope.act2 = (path === "#/view_bmi" ? "active" : "");
         $scope.act3 = (path === "#/view_phone_cat" ? "active" : "");

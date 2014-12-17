@@ -37,6 +37,7 @@
   <div class="container-fluid">
 
     <ul class="nav nav-pills">
+      <li class="{{photography}}" ng-click="myFunction('#/photography')"><a href="#/photography">Edna's Photography</a></li>
       <li class="{{act1}}" ng-click="myFunction('#/view1')"><a href="#/view1">Formula 1 Feeder</a></li>
 
       <li class="dropdown {{act2}}" ng-click="myFunction('#/view_bmi')">
@@ -50,6 +51,7 @@
       <li class="{{act3}}" ng-click="myFunction('#/view_phone_cat')"><a href="#/view_phone_cat">Phone Category</a></li>
       <li class="{{act4}}" ng-click="myFunction('#/movie_stub')"><a href="#/movie_stub">Movie Stub</a></li>
     </ul>
+
 
   </div>
 
@@ -72,6 +74,10 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
+
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
   <script src="app.js"></script>
   <script src="services.js"></script>
   <script src="view_phone_cat/animations.js"></script>
@@ -85,6 +91,9 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+
+  <!--Photography-->
+  <script src="photography/photography.js"></script>
 
 
 </body>
