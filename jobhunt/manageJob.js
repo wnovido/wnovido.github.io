@@ -9,7 +9,7 @@ jobHuntApp.controller('manageJobHuntCtrl', function ($scope,$http,$modal,$routeP
     $scope.contacts = sharedServices.getContacts();
     $scope.xxx = $routeParams._jobID;
 
-    if ($routeParams._jobID == 0)
+    if ($routeParams._jobID == -1)
         $scope.paramFlag = "Add";
     else
         $scope.paramFlag = "Update";

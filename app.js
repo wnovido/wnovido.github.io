@@ -9,8 +9,8 @@ angular.module('myApp', [
   'myApp.view4',
   'myApp.version',
   'myApp.services',
-  'myApp.photography',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'myApp.jobhunt'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -32,9 +32,9 @@ angular.module('myApp', [
 
 .controller('myAppCtrl', function($scope) {
 
-    $scope.photography = "active";
+    $scope.jobhunt = "active";
     $scope.myFunction= function(path) {
-        $scope.photography = (path === "#/photography" ? "active" : "");
+        $scope.jobhunt = (path === "#/jobhunt" ? "active" : "");
         $scope.act1 = (path === "#/view1" ? "active" : "");
         $scope.act2 = (path === "#/view_bmi" ? "active" : "");
         $scope.act3 = (path === "#/view_phone_cat" ? "active" : "");
