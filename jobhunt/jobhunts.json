@@ -3,17 +3,17 @@
     "id"            : 1,
     "dateApplied"   : "14-December-2014",
     "companyName"   : "Ajilon",
-    "contactName"   : "Wilson Novido",
-    "contactEmail"  : "wilson_novido@yahoo.com",
-    "contactPhone"  : "919-462-0527"
+    "contactName"   : "Alina Fox",
+    "contactEmail"  : "alina.fox@yahoo.com",
+    "contactPhone"  : "919-462-5555"
   },
 
   {
     "id"            : 2,
     "dateApplied"   : "25-December-2014",
     "companyName"   : "CPI",
-    "contactName"   : "Michael Jordan",
-    "contactEmail"  : "mj23@bulls.com",
+    "contactName"   : "Daniel Teri",
+    "contactEmail"  : "dteri@bulls.com",
     "contactPhone"  : "555-555-5555"
   },
 
@@ -21,8 +21,8 @@
     "id"            : 3,
     "dateApplied"   : "16-June-2014",
     "companyName"   : "Google",
-    "contactName"   : "Rich Newns",
-    "contactEmail"  : "rn@ajilon.com",
+    "contactName"   : "Richard Briggs",
+    "contactEmail"  : "rbriggs@gmail.com",
     "contactPhone"  : "555-222-1234"
   }
 
