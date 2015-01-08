@@ -37,6 +37,17 @@
     overflow: auto;
 }
 
+.pCarouselImg Img {
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+}
+
+.whiteOnLightBlue {
+    color: white;
+    background-color: rgb(180,220,255);
+}
+
 
 .navbar-novido {
     background-color: #0000ff;

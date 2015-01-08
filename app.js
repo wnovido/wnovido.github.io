@@ -11,6 +11,7 @@ angular.module('myApp', [
   'myApp.services',
   'ui.bootstrap',
   'myApp.jobhunt'
+  ,'core'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -25,14 +26,17 @@ angular.module('myApp', [
     when("/movie_stub/:id", {templateUrl: "movie_stub/movie.html", controller: "movieDetailsController"}).
     when("/bookTickets/:id", {templateUrl: "movie_stub/bookTickets.html", controller: "bookTicketsController"}).
     when('/bookings',{templateUrl: 'movie_stub/bookings.html',controller: 'bookingDetailsController'}).
+    when('/jobhunt', {templateUrl: 'jobhunt/jobhunt.html',controller: 'JobHuntCtrl'}).
+    when('/manageJob/:_jobID', {templateUrl: 'jobhunt/manageJob.html', controller: 'manageJobHuntCtrl'}).
     when("/addMovie",{templateUrl: "movie_stub/addMovie.html", controller: "addMovieController"}).
-    otherwise({redirectTo: "/jobhunt"});
+    when("/home",{templateUrl: "core/home.html", controller: "HomeController"}).
+    otherwise({redirectTo: "/home"});
 
 }])
 
 .controller('myAppCtrl', function($scope) {
 
-    $scope.jobhunt = "active";
+    //$scope.jobhunt = "active";
     $scope.myFunction= function(path) {
         $scope.jobhunt = (path === "#/jobhunt" ? "active" : "");
         $scope.act1 = (path === "#/view1" ? "active" : "");

@@ -1,0 +1,18 @@
+<section data-ng-controller="HomeController">
+	<div class="jumbotron text-center whiteOnLightBlue">
+
+		<div style="height: 400px">
+			<carousel interval="myInterval">
+				<slide ng-repeat="slide in slides" active="slide.active">
+					<div class="item pCarouselImg">
+						<img class="pCarouselImg" data-ng-src="{{slide.image}}" style="margin:auto;">
+					</div>
+					<div class="carousel-caption">
+						<h4>Application {{$index+1}}</h4>
+						<p>{{slide.text}}</p>
+					</div>
+				</slide>
+			</carousel>
+		</div>
+	</div>
+</section>

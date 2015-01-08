@@ -2,11 +2,11 @@
 
 var jobHuntApp = angular.module('myApp.jobhunt', ['ngRoute','jobHuntServices'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.
-      when('/jobhunt', {templateUrl: 'jobhunt/jobhunt.html',controller: 'JobHuntCtrl'}).
-      when('/manageJob/:_jobID', {templateUrl: 'jobhunt/manageJob.html', controller: 'manageJobHuntCtrl'});
-}])
+//.config(['$routeProvider', function($routeProvider) {
+//  $routeProvider.
+//      when('/jobhunt', {templateUrl: 'jobhunt/jobhunt.html',controller: 'JobHuntCtrl'}).
+//      when('/manageJob/:_jobID', {templateUrl: 'jobhunt/manageJob.html', controller: 'manageJobHuntCtrl'});
+//}])
 
 .controller('JobHuntCtrl', function($scope,$modal,sharedServices) {
     $scope.jobhunts = sharedServices.getJobHunts();

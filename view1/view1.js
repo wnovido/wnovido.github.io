@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute']).
+angular.module('myApp.view1', []).
 
     /* Drivers controller */
     controller('driversController', function($scope, ergastAPIservice) {
