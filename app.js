@@ -10,7 +10,7 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.services',
   'ui.bootstrap',
-  'myApp.jobhunt'
+  'myApp.membership'
   ,'core'
 ])
 
@@ -26,8 +26,8 @@ angular.module('myApp', [
     when("/movie_stub/:id", {templateUrl: "movie_stub/movie.html", controller: "movieDetailsController"}).
     when("/bookTickets/:id", {templateUrl: "movie_stub/bookTickets.html", controller: "bookTicketsController"}).
     when('/bookings',{templateUrl: 'movie_stub/bookings.html',controller: 'bookingDetailsController'}).
-    when('/jobhunt', {templateUrl: 'jobhunt/jobhunt.html',controller: 'JobHuntCtrl'}).
-    when('/manageJob/:_jobID', {templateUrl: 'jobhunt/manageJob.html', controller: 'manageJobHuntCtrl'}).
+    when('/membership', {templateUrl: 'membership/membership.html',controller: 'MembershipCtrl'}).
+    when('/manageMember/:_ID', {templateUrl: 'membership/manageMembership.html', controller: 'manageMemberCtrl'}).
     when("/addMovie",{templateUrl: "movie_stub/addMovie.html", controller: "addMovieController"}).
     when("/home",{templateUrl: "core/home.html", controller: "HomeController"}).
     otherwise({redirectTo: "/home"});
@@ -38,7 +38,7 @@ angular.module('myApp', [
 
     //$scope.jobhunt = "active";
     $scope.myFunction= function(path) {
-        $scope.jobhunt = (path === "#/jobhunt" ? "active" : "");
+        $scope.membership = (path === "#/membership" ? "active" : "");
         $scope.act1 = (path === "#/view1" ? "active" : "");
         $scope.act2 = (path === "#/view_bmi" ? "active" : "");
         $scope.act3 = (path === "#/view_phone_cat" ? "active" : "");

@@ -1,0 +1,17 @@
+[
+  {
+    "_id"           : 1,
+    "clubName"      : "VidzNovi"
+  },
+
+  {
+    "_id"           : 2,
+    "clubName"      : "Space Ibiza"
+  },
+
+  {
+    "_id"           : 3,
+    "clubName"      : "Green Valley"
+  }
+
+]

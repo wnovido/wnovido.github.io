@@ -48,6 +48,11 @@
     background-color: rgb(180,220,255);
 }
 
+.myFooter {
+    color: #0000ff;
+    background-color: skyblue;
+    height: 30px;
+}
 
 .navbar-novido {
     background-color: #0000ff;

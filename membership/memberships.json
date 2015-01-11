@@ -1,0 +1,29 @@
+[
+  {
+    "_id"                   : 1,
+    "dateOfRegistration"    : "14-December-2014",
+    "clubID"                : 2,
+    "memberName"            : "Alina Fox",
+    "memberEmail"           : "alina.fox@yahoo.com",
+    "memberPhone"           : "919-462-5555"
+  },
+
+  {
+    "_id"                   : 2,
+    "dateOfRegistration"    : "25-December-2014",
+    "clubID"                : 3,
+    "memberName"            : "Daniel Teri",
+    "memberEmail"           : "dteri@hotmail.com",
+    "memberPhone"           : "555-555-5555"
+  },
+
+  {
+    "_id"                   : 3,
+    "dateOfRegistration"    : "16-June-2014",
+    "clubID"                : 1,
+    "memberName"            : "Richard Briggs",
+    "memberEmail"           : "rbriggs@gmail.com",
+    "memberPhone"           : "555-222-1234"
+  }
+
+]

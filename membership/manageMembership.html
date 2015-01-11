@@ -1,0 +1,126 @@
+<div ng-controller="manageMemberCtrl">
+    <div class="container-fluid">
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    {{paramFlag}} Membership Information
+                </h3>
+            </div>
+
+            <div class="panel-body">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="dateOfRegistration" class="control-label">Date Of Registration</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" datepicker-popup="{{format}}"
+                                   ng-model="membershipInfo.dateOfRegistration"
+                                   is-open="opened" min-date="minDate"
+                                   max-date="maxDate" datepicker-options="dateOptions" ng-required="true"
+                                   close-text="Close" id="dateOfRegistration" focus-me="shouldBeOpen"/>
+                            <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openCalendar($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clubName" class="control-label">Club Name</label>
+                            <div class="input-group">
+                                <!--<select id="clubName" class="form-control" ng-options="club.clubName for club in clubs | orderBy:'clubName'" ng-model="selectedClub"></select>-->
+                                <select id="club" class="form-control" ng-options="club._id as club.clubName for club in clubs | orderBy:'clubName'" ng-model="selectedClub"></select>
+                                <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="openClub()"><i class="glyphicon glyphicon-pencil"></i></button>
+                                </span>
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="memberName" class="control-label">Member Name</label>
+                            <input type="text" class="form-control" id="memberName"
+                                   placeholder="Enter Member Name" ng-model="membershipInfo.memberName" required/>
+                        </div>
+                        <div class="input-group"> <label for="memberEmail" class="control-label">Member Email</label>
+                            <input type="text" class="form-control" id="memberEmail"
+                                   placeholder="Enter Member Email" ng-model="membershipInfo.memberEmail" required/>
+                        </div>
+                        <div class="input-group"> <label for="memberPhone" class="control-label">Member Phone</label>
+                            <input type="text" class="form-control" id="memberPhone"
+                                   placeholder="Enter Member Phone" ng-model="membershipInfo.memberPhone" required/>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="panel-footer">
+                <button class="btn btn-success btn-sm" ng-click="manageMember()"><i class="glyphicon glyphicon-floppy-disk"></i></button>
+                <button class="btn btn-default btn-sm" ng-click="back()"><i class="glyphicon glyphicon-home"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/ng-template" id="manageClub.html">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h3>Manage Clubs</h3>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Club Name</th>
+                            <th></th><th></th>
+                        </tr>
+                        <tr data-ng-repeat="club in _clubs">
+                            <td ng-show="!isEditable[$index]">{{club.clubName}}</td>
+                            <td ng-show="isEditable[$index]">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" ng-keypress="getNewName($event)" ng-blur="getNewName($event)"
+                                           value="{{club.clubName}}" focus-me="shouldBeOpen"/>
+                                <span class="input-group-btn">
+                                <button class="btn btn-success" ng-click="updateReference($index,_group);isEditable[$index] = false" ><i class="glyphicon glyphicon-ok"></i></button>
+                                <button class="btn btn-default" ng-click="isEditable[$index] = false" ><i class="glyphicon glyphicon-remove"></i></button>
+                                </span>
+                                </div>
+                            </td>
+                            <td><button class="btn btn-info btn-xs" ng-click="isEditable[$index] = true"><i class="glyphicon glyphicon-edit"></i></button></td>
+                            <td><button class="btn btn-danger btn-xs" ng-click="openDeleteConfirm('sm',club._id,_group)"><i class="glyphicon glyphicon-trash"></i></button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label class="sr-only" for="clubInfo.clubName">Enter Club Name</label>
+                        <input type="text" class="form-control" id="clubInfo.clubName"
+                               placeholder="Enter Club Name" ng-model="clubInfo.clubName" required/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning" ng-click="ok()" ><i class="glyphicon glyphicon-plus"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-default" ng-click="cancel()"><i class="glyphicon glyphicon-home"></i></button>
+        </div>
+
+    </div>
+</script>
+
+

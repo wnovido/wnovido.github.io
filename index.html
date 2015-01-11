@@ -52,10 +52,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <!--<li class="active"><a href="#">Link1 <span class="sr-only">(current)</span></a></li>-->
-          <li class="{{jobhunt}}" ng-click="myFunction('#/jobhunt')"><a href="#/jobhunt">Job Hunting<span class="sr-only">(current)</span></a></li>
 
-          <!--<li><a href="#">Link2</a></li>-->
+          <li class="{{membership}}" ng-click="myFunction('#/membership')"><a href="#/membership">Club Registration<span class="sr-only">(current)</span></a></li>
           <li class="{{act1}}" ng-click="myFunction('#/view1')"><a href="#/view1">Formula 1 Feeder</a></li>
 
           <!--<li class="dropdown">-->
@@ -65,7 +63,6 @@
               <!--<li><a href="#/view_bmi2">English</a></li>-->
             <!--</ul>-->
           <!--</li>-->
-
 
           <li class="{{act3}}" ng-click="myFunction('#/view_phone_cat')"><a href="#/view_phone_cat">Phone Category</a></li>
           <li class="{{act4}}" ng-click="myFunction('#/movie_stub')"><a href="#/movie_stub">Movie Stub</a></li>
@@ -128,12 +125,12 @@
   <script src="components/version/interpolate-filter.js"></script>
 
   <!--Jobhunt-->
-  <script src="jobhunt/jobhunt.js"></script>
-  <script src="jobhunt/manageJob.js"></script>
-  <script src="jobhunt/services.js"></script>
+  <script src="membership/membership.js"></script>
+  <script src="membership/manageMembership.js"></script>
+  <script src="membership/services.js"></script>
 
   <script src="core/home.js"></script>
 
-  <div class="text-center">Copyright(c) Wilson Novido <span app-version></span></div>
+  <div class="text-center myFooter">Copyright(c) Wilson Novido <span app-version></span></div>
 </body>
 </html>

@@ -12,8 +12,8 @@ angular.module('core',[]).
 			var newWidth = slides.length + 1;
 			slides.push({
 				image: 'img/slider/' + newWidth + '.jpg',
-				text: ['Job','Formula 1','Phone','Movie'][slides.length % 4] + ' ' +
-				['Hunting', 'Feeder', 'Category', 'Stub'][slides.length % 4]
+				text: ['Club Membership','Formula 1','Phone','Movie'][slides.length % 4] + ' ' +
+				['Registration', 'Feeder', 'Category', 'Stub'][slides.length % 4]
 			});
 		};
 		for (var i=0; i<4; i++) {
