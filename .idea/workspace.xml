@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de5d02ac-f0d6-4fe2-8243-4b859cb98d75" name="Default" comment="Add Photography">
-      <change type="DELETED" beforePath="C:\Users\wilso_000\IdeaProjects\JS\wnovido.github.io\img\slider\1.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/slider/1.jpg" />
     </list>
     <ignored path="wnovido.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -595,7 +594,7 @@
       <workItem from="1418830911303" duration="77000" />
       <workItem from="1418833024528" duration="92000" />
       <workItem from="1419349225202" duration="11010000" />
-      <workItem from="1420719067304" duration="55100000" />
+      <workItem from="1420719067304" duration="55192000" />
     </task>
     <task id="LOCAL-00001" summary="Add Photography">
       <created>1418789274472</created>
@@ -619,7 +618,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80618000" />
+    <option name="totallyTimeSpent" value="80710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
