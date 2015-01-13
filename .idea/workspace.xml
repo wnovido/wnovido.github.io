@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de5d02ac-f0d6-4fe2-8243-4b859cb98d75" name="Default" comment="Add Photography">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/membership/manageMembership.html" afterPath="$PROJECT_DIR$/membership/manageMembership.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/membership/manageMembership.js" afterPath="$PROJECT_DIR$/membership/manageMembership.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/membership/membership.html" afterPath="$PROJECT_DIR$/membership/membership.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/membership/services.js" afterPath="$PROJECT_DIR$/membership/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/membership/membership.js" afterPath="$PROJECT_DIR$/membership/membership.js" />
     </list>
     <ignored path="wnovido.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +30,7 @@
             <file leaf-file-name="manageMembership.js" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/membership/manageMembership.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.3233288" vertical-offset="1779" max-vertical-offset="2896">
+                  <state vertical-scroll-proportion="0.5712755" vertical-offset="1483" max-vertical-offset="2896">
                     <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
                     <folding />
                   </state>
@@ -48,21 +45,47 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="manageMembership.html" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/membership/manageMembership.html">
+            <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/membership/services.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.6475771" vertical-offset="1444" max-vertical-offset="2352">
-                    <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.53697747" vertical-offset="299" max-vertical-offset="1232">
+                    <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/membership/services.js">
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="membership.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/membership/membership.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1232">
-                    <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+                  <state vertical-scroll-proportion="0.41157556" vertical-offset="0" max-vertical-offset="933">
+                    <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="membership.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/membership/membership.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.8414097" vertical-offset="100" max-vertical-offset="1104">
+                    <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
                     <folding />
                   </state>
                 </provider>
@@ -95,10 +118,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="clubs.json" pinned="false" current-in-tab="false">
+          <file leaf-file-name="clubs.json" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/membership/clubs.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="352">
+                <state vertical-scroll-proportion="0.36501902" vertical-offset="0" max-vertical-offset="526">
                   <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
                   <folding />
                 </state>
@@ -110,16 +133,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="560">
                   <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="membership.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/membership/membership.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6387833" vertical-offset="528" max-vertical-offset="1104">
-                  <caret line="54" column="64" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
@@ -165,10 +178,10 @@
         <option value="$PROJECT_DIR$/core/home.js" />
         <option value="$PROJECT_DIR$/membership/clubs.json" />
         <option value="$PROJECT_DIR$/membership/memberships.json" />
-        <option value="$PROJECT_DIR$/membership/membership.js" />
         <option value="$PROJECT_DIR$/membership/services.js" />
         <option value="$PROJECT_DIR$/membership/manageMembership.js" />
         <option value="$PROJECT_DIR$/membership/manageMembership.html" />
+        <option value="$PROJECT_DIR$/membership/membership.js" />
         <option value="$PROJECT_DIR$/membership/membership.html" />
       </list>
     </option>
@@ -563,7 +576,7 @@
       <workItem from="1418833024528" duration="92000" />
       <workItem from="1419349225202" duration="11010000" />
       <workItem from="1420719067304" duration="58832000" />
-      <workItem from="1421095522807" duration="5167000" />
+      <workItem from="1421095522807" duration="6649000" />
     </task>
     <task id="LOCAL-00001" summary="Add Photography">
       <created>1418789274472</created>
@@ -587,7 +600,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89517000" />
+    <option name="totallyTimeSpent" value="90999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
@@ -987,26 +1000,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/membership/clubs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="352">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/membership/memberships.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="560">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/membership/membership.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34845734" vertical-offset="0" max-vertical-offset="800">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1019,22 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/membership/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1232">
-          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/membership/manageMembership.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3233288" vertical-offset="1779" max-vertical-offset="2896">
-          <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/membership/manageMembership.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6475771" vertical-offset="1444" max-vertical-offset="2352">
@@ -1043,10 +1024,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/membership/manageMembership.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5712755" vertical-offset="1483" max-vertical-offset="2896">
+          <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/membership/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53697747" vertical-offset="299" max-vertical-offset="1232">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/membership/clubs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36501902" vertical-offset="0" max-vertical-offset="526">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/membership/membership.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6387833" vertical-offset="528" max-vertical-offset="1104">
-          <caret line="54" column="64" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.8414097" vertical-offset="100" max-vertical-offset="1104">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/membership/membership.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41157556" vertical-offset="0" max-vertical-offset="933">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding />
         </state>
       </provider>

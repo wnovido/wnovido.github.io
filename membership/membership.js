@@ -9,10 +9,10 @@ var jobHuntApp = angular.module('myApp.membership', ['ngRoute','membershipServic
         return sharedServices.getCurrentClubByID(_index);
     };
 
-    $scope.openDeleteConfirm = function (size,_index) {
+    $scope.openDeleteMemberConfirm = function (size,_index) {
         var modalInstance = $modal.open({
-            templateUrl: 'myModalContent.html',
-            controller: 'ModalDeleteCtrl',
+            templateUrl: 'myMemberModalContent.html',
+            controller: 'ModalDeleteMemberCtrl',
             size: size,
             resolve: {
                 _index: function () {
@@ -22,7 +22,7 @@ var jobHuntApp = angular.module('myApp.membership', ['ngRoute','membershipServic
         });
 
         modalInstance.result.then(function (retVal) {
-            $scope.membership = retVal;
+            $scope.memberships = retVal;
         }, function () {
             $log.info('Modal dismissed at: ' + new Date());
         });
@@ -30,7 +30,7 @@ var jobHuntApp = angular.module('myApp.membership', ['ngRoute','membershipServic
 
 })
 
-.controller('ModalDeleteCtrl', function ($scope, $http, $modalInstance, _index, sharedServices) {
+.controller('ModalDeleteMemberCtrl', function ($scope, $http, $modalInstance, _index, sharedServices) {
     $scope.ok = function () {
         sharedServices.deleteCurrentRecord(_index);
         $modalInstance.close(sharedServices.getMemberships());
