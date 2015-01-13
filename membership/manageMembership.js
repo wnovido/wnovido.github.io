@@ -63,7 +63,7 @@ jobHuntApp.controller('manageMemberCtrl', function ($scope,$http,$modal,$routePa
         var modalInstance = $modal.open({
             templateUrl: 'manageClub.html',
             controller: 'ClubModalInstanceCtrl',
-            size: 'sm',
+            size: 'md',
             resolve: {
                 _clubs: function () {
                     return $scope.clubs;
@@ -100,7 +100,7 @@ jobHuntApp.controller('manageMemberCtrl', function ($scope,$http,$modal,$routePa
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-.controller('ClubModalInstanceCtrl', function ($scope, $modalInstance, $http, _clubs, sharedServices) {
+.controller('ClubModalInstanceCtrl', function ($scope, $modalInstance, $http, $modal, _clubs, sharedServices) {
     $scope._clubs = _clubs;
     $scope.shouldBeOpen = true;
 
@@ -119,8 +119,57 @@ jobHuntApp.controller('manageMemberCtrl', function ($scope,$http,$modal,$routePa
     $scope.cancel = function () {
         $modalInstance.close($scope._clubs);
     };
+
+    $scope.getNewName = function ($event) {
+        $scope.newName = $event.target.value.trim();
+    };
+
+    $scope.updateClub = function (_index) {
+        if ($scope.newName === undefined)
+            alert("Club Name Empty!");
+        else {
+            sharedServices.updateCurrentClub(_index,$scope.newName);
+            $scope._clubs = sharedServices.getClubs();
+            $scope.clubInfo = {};
+        }
+    };
+
+
+    $scope.openDeleteConfirm = function (size,_index) {
+        var modalInstance = $modal.open({
+            templateUrl: 'myModalContent.html',
+            controller: 'ModalDeleteCtrl',
+            size: size,
+            resolve: {
+                _index: function () {
+                    return _index;
+                }
+            }
+        });
+
+        modalInstance.result.then(function (retVal) {
+            $scope._clubs = retVal;
+            $scope.clubName = '';
+            $scope.shouldBeOpen = true;
+        }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
+
+
 })
 
 
+.controller('ModalDeleteCtrl', function ($scope, $http, $modalInstance, _index, sharedServices) {
+    $scope.ok = function () {
+        sharedServices.deleteCurrentClubRecord(_index);
+        $modalInstance.close(sharedServices.getClubs());
+    };
+
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
+
+})
 ;
 

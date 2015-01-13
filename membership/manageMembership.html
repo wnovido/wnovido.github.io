@@ -25,9 +25,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="clubName" class="control-label">Club Name</label>
+                        <label for="club" class="control-label">Club Name</label>
                             <div class="input-group">
-                                <!--<select id="clubName" class="form-control" ng-options="club.clubName for club in clubs | orderBy:'clubName'" ng-model="selectedClub"></select>-->
                                 <select id="club" class="form-control" ng-options="club._id as club.clubName for club in clubs | orderBy:'clubName'" ng-model="selectedClub"></select>
                                 <span class="input-group-btn">
                                 <button type="button" class="btn btn-default" ng-click="openClub()"><i class="glyphicon glyphicon-pencil"></i></button>
@@ -64,7 +63,6 @@
 
 
 
-
 <script type="text/ng-template" id="manageClub.html">
     <div class="panel panel-info">
         <div class="panel-heading">
@@ -88,13 +86,13 @@
                                     <input type="text" class="form-control" ng-keypress="getNewName($event)" ng-blur="getNewName($event)"
                                            value="{{club.clubName}}" focus-me="shouldBeOpen"/>
                                 <span class="input-group-btn">
-                                <button class="btn btn-success" ng-click="updateReference($index,_group);isEditable[$index] = false" ><i class="glyphicon glyphicon-ok"></i></button>
+                                <button class="btn btn-success" ng-click="updateClub($index);isEditable[$index] = false" ><i class="glyphicon glyphicon-ok"></i></button>
                                 <button class="btn btn-default" ng-click="isEditable[$index] = false" ><i class="glyphicon glyphicon-remove"></i></button>
                                 </span>
                                 </div>
                             </td>
                             <td><button class="btn btn-info btn-xs" ng-click="isEditable[$index] = true"><i class="glyphicon glyphicon-edit"></i></button></td>
-                            <td><button class="btn btn-danger btn-xs" ng-click="openDeleteConfirm('sm',club._id,_group)"><i class="glyphicon glyphicon-trash"></i></button></td>
+                            <td><button class="btn btn-danger btn-xs" ng-click="openDeleteConfirm('sm',$index)"><i class="glyphicon glyphicon-trash"></i></button></td>
 
                         </tr>
                     </tbody>
@@ -123,4 +121,21 @@
     </div>
 </script>
 
+
+
+
+
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Confirm Delete</h3>
+    </div>
+    <div class="modal-body">
+        Are you sure you want to delete this record?
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">Yes</button>
+        <button class="btn btn-warning" ng-click="cancel()">No</button>
+    </div>
+</script>
 

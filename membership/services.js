@@ -58,8 +58,13 @@ angular.module('membershipServices',['ngResource']).
             },
             getCurrentClubByID:   function(index) {
                 return clubs[index];
+            },
+            deleteCurrentClubRecord:   function(index) {
+                clubs.splice(index, 1);
+            },
+            updateCurrentClub:   function(index,value) {
+                clubs[index].clubName = value;
             }
-
         }
     });
 
