@@ -58,6 +58,7 @@ jobHuntApp.controller('manageMemberCtrl', function ($scope,$http,$modal,$routePa
     $scope.format = $scope.formats[0];
 
 
+
     $scope.openClub = function () {
 
         var modalInstance = $modal.open({
@@ -80,6 +81,35 @@ jobHuntApp.controller('manageMemberCtrl', function ($scope,$http,$modal,$routePa
 
 
     $scope.manageMember = function () {
+        var dateReg = $scope.membershipInfo.dateOfRegistration;
+
+        //if (isFutureDate(dateReg)) {
+        //    alert("Future Date");
+        //    return;
+        //}
+
+        if ($scope.membershipInfo.dateOfRegistration === undefined) {
+            alert("Date of Registration must have a value");
+            return;
+        }
+
+        if ($scope.membershipInfo.memberName === undefined) {
+            alert("Member Name must have a value");
+            return;
+        }
+
+        if ($scope.membershipInfo.memberEmail === undefined) {
+            alert("Member Email must have a value");
+            return;
+        }
+
+
+        if ($scope.membershipInfo.memberPhone === undefined) {
+            alert("Member Phone must have a value");
+            return;
+        }
+
+
         $scope.membershipInfo.clubID = $scope.selectedClub;
 
         if ($routeParams._ID == -1) {
@@ -93,17 +123,28 @@ jobHuntApp.controller('manageMemberCtrl', function ($scope,$http,$modal,$routePa
             window.history.back();
         }
     };
+
+    //alert(isFutureDate("02/03/2014"); // true
+    //alert(isFutureDate("01/01/2014"); // false
+
+    function isFutureDate(idate){
+        var today = new Date().getTime(),
+            idate = idate.split("/");
+
+        idate = new Date(idate[2], idate[1] - 1, idate[0]).getTime();
+        return (today - idate) < 0 ? true : false;
+    }
+
 })
 
 
 
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
-
 .controller('ClubModalInstanceCtrl', function ($scope, $modalInstance, $http, $modal, _clubs, sharedServices) {
     $scope._clubs = _clubs;
     $scope.shouldBeOpen = true;
+        $scope.txtClubName = "";
 
+    //add
     $scope.ok = function () {
         if ($scope.clubInfo.clubName === undefined)
             alert("Club Name Empty!");
@@ -120,21 +161,22 @@ jobHuntApp.controller('manageMemberCtrl', function ($scope,$http,$modal,$routePa
         $modalInstance.close($scope._clubs);
     };
 
-    $scope.getNewName = function ($event) {
-        $scope.newName = $event.target.value.trim();
-    };
 
-    $scope.updateClub = function (_index) {
-        if ($scope.newName === undefined)
-            alert("Club Name Empty!");
+
+    //update
+    $scope.updateClub = function (_index,_clubName) {
+        if (_clubName === '' || _clubName === undefined)
+            alert("Club Name Empty!" + _clubName);
         else {
-            sharedServices.updateCurrentClub(_index,$scope.newName);
+            sharedServices.updateCurrentClub(_index,_clubName);
             $scope._clubs = sharedServices.getClubs();
             $scope.clubInfo = {};
         }
     };
 
 
+
+    //delete
     $scope.openDeleteConfirm = function (size,_index) {
         var modalInstance = $modal.open({
             templateUrl: 'myModalContent.html',

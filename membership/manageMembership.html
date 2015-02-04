@@ -83,17 +83,16 @@
                             <td ng-show="!isEditable[$index]">{{club.clubName}}</td>
                             <td ng-show="isEditable[$index]">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" ng-keypress="getNewName($event)" ng-blur="getNewName($event)"
-                                           value="{{club.clubName}}" focus-me="shouldBeOpen"/>
+                                    <input type="text" class="form-control" focus-me="shouldBeOpen" ng-model="txtClubName" required/>
                                 <span class="input-group-btn">
-                                <button class="btn btn-success" ng-click="updateClub($index);isEditable[$index] = false" ><i class="glyphicon glyphicon-ok"></i></button>
+                                <button class="btn btn-success" ng-click="updateClub($index,txtClubName);isEditable[$index] = false" ><i class="glyphicon glyphicon-ok"></i></button>
                                 <button class="btn btn-default" ng-click="isEditable[$index] = false" ><i class="glyphicon glyphicon-remove"></i></button>
                                 </span>
                                 </div>
                             </td>
-                            <td><button class="btn btn-info btn-xs" ng-click="isEditable[$index] = true"><i class="glyphicon glyphicon-edit"></i></button></td>
+                            <td><button class="btn btn-info btn-xs" ng-click="txtClubName=club.clubName;isEditable[$index] = true">
+                                <i class="glyphicon glyphicon-edit"></i></button></td>
                             <td><button class="btn btn-danger btn-xs" ng-click="openDeleteConfirm('sm',$index)"><i class="glyphicon glyphicon-trash"></i></button></td>
-
                         </tr>
                     </tbody>
                 </table>
