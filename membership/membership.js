@@ -2,7 +2,32 @@
 
 var jobHuntApp = angular.module('myApp.membership', ['ngRoute','membershipServices'])
 
-.controller('MembershipCtrl', function($scope,$modal,sharedServices) {
+.controller('MembershipCtrl', function($scope,$modal,sharedServices,formFactory) {
+
+    $scope.forms = formFactory.query();
+
+    $scope.getForm = function () {
+
+        var blob = new Blob([document.getElementById('exportable').innerHTML], {
+            type: "application/xhtml+xml;charset=utf-8"
+        });
+        saveAs(blob, "Sample.xhtml");
+    };
+
+
+
+
+            $scope.exportData = function () {
+                var blob = new Blob([document.getElementById('exportable').innerHTML], {
+                    type: "application/xhtml+xml;charset=utf-8"
+                });
+                saveAs(blob, "Report.xhtml");
+            };
+
+
+
+
+
     $scope.memberships = sharedServices.getMemberships();
 
     $scope.getClubNameByID = function (_index) {

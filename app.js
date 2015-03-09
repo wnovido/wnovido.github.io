@@ -10,8 +10,8 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.services',
   'ui.bootstrap',
-  'myApp.membership'
-  ,'core'
+  'myApp.membership',
+  'core'
 ])
 
 .config(['$routeProvider', function($routeProvider) {

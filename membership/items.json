@@ -1,0 +1,9 @@
+[{
+  "name": "John Smith",
+  "email": "j.smith@example.com",
+  "dob": "1985-10-10"
+}, {
+  "name": "Jane Smith",
+  "email": "jane.smith@example.com",
+  "dob": "1988-12-22"
+}]

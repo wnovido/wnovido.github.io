@@ -56,13 +56,13 @@
           <li class="{{membership}}" ng-click="myFunction('#/membership')"><a href="#/membership">Club Registration<span class="sr-only">(current)</span></a></li>
           <li class="{{act1}}" ng-click="myFunction('#/view1')"><a href="#/view1">Formula 1 Feeder</a></li>
 
-          <!--<li class="dropdown">-->
-            <!--<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">BMI Calculator <span class="caret"></span></a>-->
-            <!--<ul class="dropdown-menu" role="menu">-->
-              <!--<li><a href="#/view_bmi">Metric</a></li>-->
-              <!--<li><a href="#/view_bmi2">English</a></li>-->
-            <!--</ul>-->
-          <!--</li>-->
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">BMI Calculator <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#/view_bmi">Metric</a></li>
+              <li><a href="#/view_bmi2">English</a></li>
+            </ul>
+          </li>
 
           <li class="{{act3}}" ng-click="myFunction('#/view_phone_cat')"><a href="#/view_phone_cat">Phone Category</a></li>
           <li class="{{act4}}" ng-click="myFunction('#/movie_stub')"><a href="#/movie_stub">Movie Stub</a></li>
@@ -78,7 +78,7 @@
         <!--</form>-->
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-    
+
   </nav>
 
 
@@ -130,6 +130,12 @@
   <script src="membership/services.js"></script>
 
   <script src="core/home.js"></script>
+
+  <script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js" type="text/javascript"></script>
+
+  <!--<script async="" src="https://cdn.rawgit.com/eligrey/Blob.js/master/Blob.js"/>-->
+  <!--<script async="" src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/master/canvas-toBlob.js"/>-->
+  <!--<script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"/>-->
 
   <div class="text-center myFooter">Copyright(c) Wilson Novido <span app-version></span></div>
 </body>

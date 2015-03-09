@@ -16,6 +16,13 @@ angular.module('membershipServices',['ngResource']).
         });
     }).
 
+    factory('formFactory', function ($resource) {
+        return $resource('membership/forms.json', {}, {
+            query: {method:'GET', isArray:true}
+        });
+    }).
+
+
     service('sharedServices', function(membershipFactory,clubFactory) {
         var memberships = membershipFactory.query();
         var clubs = clubFactory.query();
